@@ -155,7 +155,7 @@
                                     <div class="row g-4 fruite">
                                         <div class="col-lg-12">
 
-                                            <div class="mb-4">
+                                            <!-- <div class="mb-4">
                                                 <h4>Categories</h4>
                                                 <ul class="list-unstyled fruite-categorie">
                                                     <li>
@@ -189,7 +189,7 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

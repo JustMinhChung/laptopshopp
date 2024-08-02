@@ -101,7 +101,6 @@ public class UserController {
             return "admin/user/create";
         }
 
-        //
         String avatar = this.uploadService.handleSaveUploadFile(file, "avatar");
         String hashPassword = this.passwordEncoder.encode(hoidanit.getPassword());
 
@@ -128,7 +127,6 @@ public class UserController {
             currentUser.setFullName(hoidanit.getFullName());
             currentUser.setPhone(hoidanit.getPhone());
 
-            // bug here
             this.userService.handleSaveUser(currentUser);
         }
         return "redirect:/admin/user";
@@ -137,8 +135,6 @@ public class UserController {
     @GetMapping("/admin/user/delete/{id}")
     public String getDeleteUserPage(Model model, @PathVariable long id) {
         model.addAttribute("id", id);
-        // User user = new User();
-        // user.setId(id);
         model.addAttribute("newUser", new User());
         return "admin/user/delete";
     }

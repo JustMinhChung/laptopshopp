@@ -21,7 +21,6 @@ public class UploadService {
     }
 
     public String handleSaveUploadFile(MultipartFile file, String targetFolder) {
-        // don't upload file
         if (file.isEmpty())
             return "";
         // relative path: absolute path
@@ -38,7 +37,6 @@ public class UploadService {
             finalName = System.currentTimeMillis() + "-" + file.getOriginalFilename();
 
             File serverFile = new File(dir.getAbsolutePath() + File.separator + finalName);
-            // uuid
 
             BufferedOutputStream stream = new BufferedOutputStream(
                     new FileOutputStream(serverFile));
